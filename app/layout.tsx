@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Grievance Portal 💔",
   description: "A playful space for submitting relationship grievances",
-    generator: 'v0.dev'
+    
 }
 
 export default function RootLayout({

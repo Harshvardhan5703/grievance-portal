@@ -28,9 +28,9 @@ export async function submitGrievance(data: GrievanceData) {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASSWORD,
     },
-     tls: {
-    rejectUnauthorized: false, // Add this line for local dev fix
-  },
+  //    tls: {
+  //   rejectUnauthorized: false, 
+  // },
   })
 
   // Compose the email
@@ -51,10 +51,10 @@ export async function submitGrievance(data: GrievanceData) {
   try {
     // Send the email
     await transporter.sendMail(mailOptions)
-    console.log("Email sent successfully")
+    console.log("Email sent successfully to harsak0007@gmail.com ")
 
     // Simulate some delay (optional)
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    // await new Promise((resolve) => setTimeout(resolve, 1000))
 
     return { success: true }
   } catch (error) {
